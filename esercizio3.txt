@@ -1,0 +1,10 @@
+let a:number = prompt("inscerisci primo numero");
+let b:number = prompt("inserisci secondo numero");
+const somma = (a*1)+(b*1);
+console.log (somma);
+const sottrazione = a - b;
+console.log (sottrazione);
+const moltiplicazione = a * b;
+console.log (moltiplicazione);
+const divisione = a / b;
+console.log (divisione);
