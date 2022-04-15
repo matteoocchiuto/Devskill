@@ -1,0 +1,7 @@
+let prima:string =prompt("Inscerisci prima");
+let seconda:string =prompt("Inserisci seconda");
+let concatenata1:string;
+let concatenata2:string;
+concatenata1 = prima + seconda;
+concatenata2 = seconda + prima;
+console.log (concatenata1 , concatenata2);
