@@ -1,0 +1,8 @@
+let input:string =prompt ("Inserisci la base");
+let base:number = + input
+input =prompt ("Inserisci l'altezza");
+let altezza:number = +input;
+const area = altezza * base
+console.log (area)
+const perimetro =2*(base + altezza)
+console.log (perimetro)
