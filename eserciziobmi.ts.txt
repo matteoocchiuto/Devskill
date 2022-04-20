@@ -1,0 +1,38 @@
+let pesolibre:number = prompt("Inserisci il tuo peso in libre");
+let altezzapiedi:number = prompt("inserisci la tua altezza in piedi");
+let pesokg:number;
+let altezzametri:number;
+let BMI:number;
+
+pesokg= pesolibre * 0.45;
+altezzametri= altezzapiedi * 0.30;
+BMI= pesokg/(altezzametri * altezzametri);
+console.log("Il tuo BMI corrisponde a " + BMI);
+if (BMI < 16.5) {console.log("Sottopeso severo");}
+else if (BMI >= 16.5 && BMI <= 18.4) {console.log("Sottopeso");}
+else if (BMI >= 18.5 && BMI <= 24.9) {console.log("Normale");}
+else if (BMI >= 25 && BMI < 30) {console.log("Sovrappeso");}
+else if (BMI >= 30.1 && BMI <= 34.9) {console.log("Obesità primo grado");}
+else if (BMI >= 35 && BMI < 40) {console.log("Obesità secondo grado");}
+else if (BMI >= 40) {console.log("GSKIANTO");}
+
+let S:string = 'S';
+let N:string = 'N';
+
+let risposta:string =prompt("Vuoi effettuare una misurazione più precisa? 'S' o 'N'");
+if (risposta == 'N'){alert("Arrivederci");}
+
+else if (risposta == 'S') {
+    let cpolso= prompt("Inserisci circonferenza polso in cm");
+let F:string = 'F';
+let M:string = 'M';
+let risposta:string= prompt("Inserisci il sesso 'M'/'F'");
+    if (risposta == 'F') {     if (cpolso<15) {console.log("ESILE");}
+                                  if (cpolso>=15 && cpolso <=16) {console.log("NORMALE");}
+                                  if (cpolso>16) {console.log("ROBUSTA");}
+    }
+    if (risposta == 'M') {     if (cpolso<17) {console.log("ESILE");}
+                                  if (cpolso>=17 && cpolso <=18) {console.log("NORMALE");}
+                                  if (cpolso>18) {console.log("ROBUSTO");}
+    }
+}
