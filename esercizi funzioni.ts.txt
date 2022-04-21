@@ -1,0 +1,126 @@
+-------------------------------------------------------ESERCIZIO NOME COGNOME MAIUSCOLO--------------------------------------------
+
+function nome (nome:string,cognome:string):string {
+    let nc:string = nome+" "+cognome;
+    return console.log(nc.toUpperCase());
+
+}
+let input1:string = prompt("Inserisci il tuo nome");
+let input2:string = prompt("Inserisci il tuo cognome");
+nome(input1,input2);
+
+---------------------------------------------------------ESERCIZIO NOME COGNOME MINUSCOLO----------------------------------------
+
+function nome (nome:string,cognome:string):string {
+    let nc:string = nome+" "+cognome;
+    return console.log(nc.toLowerCase());
+
+}
+let input1:string = prompt("Inserisci il tuo nome");
+let input2:string = prompt("Inserisci il tuo cognome");
+nome(input1,input2);
+
+------------------------------------------------------ESERCIZIO ANNO BISESTILE O NON BISESTILE---------------------------------
+
+function annoBisestile(anno: number): string {
+
+
+    if ((anno % 400 == 0) || (anno % 4 == 0 && anno % 100 != 0)) {
+        return console.log("E' BISESTILE");
+    }
+    else {
+        return console.log("NON E' BISESTILE");
+    }
+}
+let annocorrente: number = prompt("Insersci l'anno") * 1;
+annoBisestile(annocorrente);
+
+-------------------------------------------------------------ESERCIZIO POSITIVO-NEGATIVO -----------------------------------
+
+function positivonegativo (numero:number):string{
+    if (numero>=0){
+        return "Positivo";
+    }
+        return "Negativo";   
+    
+}
+let input:number=prompt("Inserisci il numero")*1;
+
+console.log(positivonegativo(input));
+
+-----------------------------------------------------------ESERCIZIO BMI------------------------------------------------------------
+function calcoloBmi(peso:number,altezza:number):number{
+  peso= pesoConv (peso);
+  altezza= altezzaConv (altezza);
+  return peso / (altezza * altezza);
+}
+function pesoConv(peso:number):number{
+  return peso * 0.4;
+} 
+function altezzaConv(altezza:number):number{
+  return altezza * 0.3;
+}
+function fisico(calcoloBmi:number):string{
+  if (16.5 > calcoloBmi ) {
+  return ("il tuo BMI è Sottopeso severo " +calcoloBmi);
+
+  }else if (16.5<=calcoloBmi && calcoloBmi <=18.4) {
+  return ("il tuo BMI è Sottopeso " +calcoloBmi);
+
+  }else if (18.5<=calcoloBmi && calcoloBmi <=24.9) {
+  return  ("il tuo BMI è Normale " +calcoloBmi);
+  
+  }else if (25<=calcoloBmi && calcoloBmi <=30) {
+  return  ("il tuo BMI è Sovrappeso " +calcoloBmi);
+  
+  }else if (30.1<=calcoloBmi && calcoloBmi <=34.9) {
+  return  ("il tuo BMI è Obesità primo grado " +calcoloBmi);
+
+  }else if (35<=calcoloBmi && calcoloBmi <=40) {
+  return  ("il tuo BMI è Obesità secondo grado " +calcoloBmi);
+  
+  }else if (40<calcoloBmi ) {
+  return  ("il tuo BMI è Gskianto " +calcoloBmi);
+  }
+}
+function stampa(risultato:string):void{
+  console.log(""+risultato);
+}
+function misurazionePrecisa(sesso:string,polso:number):string{
+  
+   if (sesso=="m") {
+    if (polso<17)
+    return ("Esile");
+    if (17<=polso && polso<=18) {
+    return ("Normale");}
+    if (polso>18){
+    return ("Robusto");}
+  }
+  if(sesso=="f")  {
+    if (polso<15) {
+    return ("Esile");}
+    if (15.1<=polso && polso==15.9) {
+    return ("Normale");}
+    if (polso>16){
+    return ("Robusto");}
+    }
+}
+
+function stampaPrecisa(risposta:string):void{
+  console.log("" +risposta);
+}
+
+let peso:number = prompt ("inserisci il tuo peso in libre")*1;
+let altezza:number = prompt ("inserisci la tua altezza in piedi")*1;
+stampa (fisico(calcoloBmi(peso,altezza)));
+
+let input:string =prompt ("Vuoi effettuare una misurazione più precisa? \ndigitare si o no");
+let risposta:number= +input;
+if  (input =="no") {
+}else (input=="si") {
+  let sesso:string = prompt ("inserisci il tuo sesso m/f");
+  let polso:number = prompt ("inserisci la circonferenza del tuo polso in cm");
+  stampaPrecisa (misurazionePrecisa(sesso,polso));
+}
+console.log ("Arrivederci");
+
