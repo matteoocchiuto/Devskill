@@ -1,0 +1,70 @@
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<NUMERO MAGGIORE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+function controllo  (numeroCorrente:number,max:number):number{
+    if (numeroCorrente > max){
+        max=numeroCorrente;
+    }
+    return max;
+}
+
+
+let input:number = +(prompt("inserisci un numero")) ;
+let max: number = input;
+while ( input != -1 ){
+       if ( input > max ){
+           max = input;
+       }
+       
+       input = +prompt("inserisci un numero");
+
+}
+    
+console.log(max);   
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<NUMERO MINORE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+let numreroMin:number=Number.MAX_SAFE_INTEGER;
+let numero2:number=0;
+while(numero2!=-1){
+    let input=prompt("Inserisci un numero: ")*1;
+
+    if(input<=numreroMin && input !=-1){
+        numreroMin=input;
+    }
+    if (input===-1){
+        numero2=input;
+    }
+}
+console.log(numreroMin);
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<VETTORE MASSIMO>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+let A:number[] = [1, 5, 94, 2, 6, 384, 9, 11, 17, 23, 70];
+
+let max:number = A[0];
+
+for (let i = 0; i < A.length; i++){
+      
+   if (A [i] > max){
+       max = A[i];
+   }
+
+}
+console.log(max);
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<VETTORE MASSIMO INPUT>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+let input:number = +(prompt("Inserisci numero"));
+
+let max:number = input;
+
+for (let i = 0; i < 9; i++){
+      
+   if (input > max){
+       max = input;
+   }
+   input = +prompt("Inserisci numero");
+
+}
+console.log(max);
