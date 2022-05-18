@@ -1,0 +1,94 @@
+N36.
+let x: number = +prompt("inserisci il divisore");
+let A: number[] = popolArray(10);
+controllArray(A, x);
+
+function popolArray(n: number): number[] {
+    let A: number[] = [];
+    for (let i = 0; i < n; i++) {
+        A[i] = +prompt("inserisci un numero");
+    }
+    return A;
+}
+
+function controllArray(A: number[], x: number): string {
+    let c: number = 0;
+    for (let i = 0; i < A.length; i++) {
+        if (A[i] % x != 0) {
+            c++;
+        }
+    }
+    if (c == A.length) {
+        console.log("OK");
+    }
+    else {
+        console.log("NO");
+    }
+
+}
+
+N32.
+let numero: number = parseInt(prompt("Inserisci un numero della sequenza"))
+let sequenza: number[] = []
+
+
+while (numero != 0) {
+    sequenza.push(numero)
+    numero = parseInt(prompt("Inserisci un numero della sequenza"))
+}
+
+let andamentoDecrescente: boolean = false
+let andamentoCrescente: boolean = false
+let condizione: boolean = true
+
+
+for (let i = 0; i < sequenza.length - 1; i++) {
+
+    if (sequenza[i] > sequenza[i + 1]) {
+
+        if (andamentoDecrescente == false) {
+            andamentoDecrescente = true
+        }
+
+    } else {
+
+        andamentoCrescente = true
+
+        if (andamentoDecrescente) {
+            condizione = false
+        }
+    }
+}
+
+if (condizione && andamentoCrescente && andamentoDecrescente) {
+    console.log("si")
+} else {
+    console.log("no")
+}
+
+N7B.
+let x: number = +prompt("Inserisci x");
+let n: number = +prompt("Inserisci n");
+let A: number[] = riempiArray(n);
+stampaPari(x, A);
+
+function riempiArray(n: number): number[] {
+    let array: number[] = [];
+    let input: number;
+    for (let i = 0; i < n; i++) {
+        input = +prompt("Inserisci numero");
+        array.push(input);
+    }
+    return array;
+}
+function stampaPari(x: number, array: number[]): void {
+    let str: string = "";
+
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] % 2 == 0 && array[i] < x) {
+            str = str + array[i];
+        }
+    }
+    console.log(+str);
+}
+
